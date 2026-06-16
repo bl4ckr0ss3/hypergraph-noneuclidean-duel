@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="20" fill="#0a0e14"/>
+  <circle cx="64" cy="64" r="52" fill="none" stroke="#39d0d8" stroke-width="3"/>
+  <!-- geodesic-like arcs (circles orthogonal to the boundary) -->
+  <path d="M64 12 A 120 120 0 0 1 116 64" fill="none" stroke="#7c5cff" stroke-width="2.5"/>
+  <path d="M12 64 A 120 120 0 0 1 64 12" fill="none" stroke="#7c5cff" stroke-width="2.5"/>
+  <path d="M64 116 A 120 120 0 0 1 12 64" fill="none" stroke="#7c5cff" stroke-width="2.5"/>
+  <path d="M116 64 A 120 120 0 0 1 64 116" fill="none" stroke="#7c5cff" stroke-width="2.5"/>
+  <circle cx="44" cy="44" r="4" fill="#e8e8ff"/>
+  <circle cx="86" cy="52" r="4" fill="#e8e8ff"/>
+  <circle cx="64" cy="64" r="5.5" fill="#39d0d8"/>
+</svg>

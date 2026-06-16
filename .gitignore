@@ -1,0 +1,18 @@
+# Godot 4 ----------------------------------------------------------------
+.godot/
+/android/
+/build/
+
+# Exported artifacts
+*.exe
+*.pck
+*.zip
+
+# Editor / OS junk
+*.import.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python reference harness
+tools/reference/__pycache__/
