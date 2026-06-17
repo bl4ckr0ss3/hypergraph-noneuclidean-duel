@@ -5,6 +5,7 @@ extends Control
 
 var world: PoincareView = null
 var _text: Label
+var _acc := 0.0
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
@@ -26,9 +27,13 @@ func _ready() -> void:
 func toggle() -> void:
 	visible = not visible
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if not visible:
 		return
+	_acc += delta
+	if _acc < 0.15:  # throttle: rebuilding the stats string every frame is costly
+		return
+	_acc = 0.0
 	_text.text = _build_text()
 
 func _build_text() -> String:

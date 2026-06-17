@@ -9,7 +9,8 @@ extends RefCounted
 ##
 ## Server-authoritative: only the host simulates; positions are broadcast.
 
-var hpos: Vector2 = Vector2.ZERO
+var hpos: Vector2 = Vector2.ZERO   # authoritative (host) position
+var vpos: Vector2 = Vector2.ZERO   # visual position (interpolated on clients)
 var current_node: int = 0
 var target_node: int = -1
 var chase_pos: Vector2 = Vector2.ZERO

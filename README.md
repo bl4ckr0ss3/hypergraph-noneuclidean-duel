@@ -12,6 +12,12 @@ Built with **Godot 4** (GDScript), open-source under the MIT license.
 > weird, intelligent and playable — a real game loop with serious math under the
 > hood, not a static visualization.
 
+**Look & feel:** soft, cute, MapleStory‑flavoured pastel art — a cosy
+"snow‑globe" hyperbolic world with chibi characters, bouncy slime monsters and
+heart fragments, designed to be played co‑op with a friend. The deep math
+(hyperbolic geometry, NP‑hard puzzle gates, deterministic generation) stays
+under the hood; see **[RESEARCH.md](RESEARCH.md)** for the rigorous notes.
+
 ---
 
 ## The idea
@@ -45,7 +51,8 @@ isometries.
 | **SAT / CNF** | `src/puzzle/SatPuzzle.gd` | A gate is a CNF formula; switch-nodes are boolean variables. Instances are generated with a planted solution (always satisfiable) and verified live. |
 | **Finite fields / modular arithmetic** | `src/math/FiniteField.gd` | A "rotor gate" opens when the sum of its dial-nodes' colour indices is `≡ target (mod m)`. |
 
-All of the above are validated numerically — see [Verification](#verification).
+All of the above are validated numerically — see [Verification](#verification) —
+and derived rigorously in **[RESEARCH.md](RESEARCH.md)**.
 
 ---
 

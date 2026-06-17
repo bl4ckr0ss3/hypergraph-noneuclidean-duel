@@ -29,13 +29,21 @@ const RESPAWN_SECONDS := 2.5
 const ROUND_SECONDS := 240.0
 const FRAGMENT_TARGET := 5
 
-# --- Palette ---------------------------------------------------------------
-const SLOT_COLORS := [Color("39d0d8"), Color("ff5c8a")]            # P1 teal, P2 pink
-const NODE_PALETTE := [Color("e84545"), Color("f9c74f"), Color("43aa8b"), Color("577590")]
-const NEUTRAL_COLOR := Color("2c3242")
-const DISK_EDGE_COLOR := Color("39d0d8")
-const BG_TILING_COLOR := Color(0.49, 0.40, 1.0, 0.16)
-const GEODESIC_COLOR := Color(0.55, 0.62, 0.78, 0.55)
+# --- Palette (soft, cute MapleStory-style pastel) --------------------------
+const SLOT_COLORS := [Color("4fc8c0"), Color("ff9ec7")]           # P1 mint, P2 pink
+const NODE_PALETTE := [Color("ff9aa2"), Color("ffd59e"), Color("a8e6cf"), Color("a0c4ff")]  # coral, peach, mint, sky
+const NEUTRAL_COLOR := Color("efe9f7")        # soft lavender-white bubble
+const DISK_EDGE_COLOR := Color("c9b6ff")      # soft purple ring
+const BG_TILING_COLOR := Color(0.64, 0.56, 0.86, 0.22)
+const GEODESIC_COLOR := Color(0.74, 0.68, 0.86, 0.55)
+# cute-theme additions
+const SKY_TOP := Color("c3e8ff")              # background gradient (top)
+const SKY_BOTTOM := Color("ffdcec")           # background gradient (bottom)
+const DISK_FILL := Color("fff7fb")            # cream disk interior
+const INK := Color("7a6e8c")                  # soft outline (never pure black)
+const SKIN := Color("ffe2c6")                 # character face
+const FRAGMENT_COLOR := Color("ff8fab")       # cute heart (pink)
+const ENEMY_COLOR := Color("9be59b")          # cute slime (green)
 
 func _ready() -> void:
 	_register_actions()

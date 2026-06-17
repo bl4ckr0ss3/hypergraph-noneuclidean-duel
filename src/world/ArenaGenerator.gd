@@ -149,10 +149,13 @@ static func generate(world_seed: int) -> ArenaData:
 	data.init_owner = owner
 	data.init_color = color
 
-	# --- spawn points: roughly opposite outer nodes ------------------------
-	var outer: Array = layers[LAYERS]
-	var s0 := _nearest_by_angle(g, outer, 0.0)
-	var s1 := _nearest_by_angle(g, outer, PI)
+	# --- spawn points: opposite nodes on the INNER ring --------------------
+	# Spawning on the inner ring (not the rim) gives each player a rich, readable
+	# neighbourhood under the recentre camera; a rim spawn pushes the whole arena
+	# to one side of the disk.
+	var inner: Array = layers[1]
+	var s0 := _nearest_by_angle(g, inner, 0.0)
+	var s1 := _nearest_by_angle(g, inner, PI)
 	var sp := PackedVector2Array()
 	sp.append(g.positions[s0] if s0 >= 0 else Vector2(0.3, 0.0))
 	sp.append(g.positions[s1] if s1 >= 0 else Vector2(-0.3, 0.0))
